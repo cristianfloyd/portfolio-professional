@@ -1,0 +1,42 @@
+.group {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.group:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+.groupTitle {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skillBadge {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--foreground);
+  transition: all 0.2s ease;
+}
+
+.skillBadge:hover {
+  background: rgba(0, 210, 255, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}

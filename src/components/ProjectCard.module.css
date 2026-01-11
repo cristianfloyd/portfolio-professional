@@ -1,0 +1,108 @@
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0, 210, 255, 0.05), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px rgba(0, 210, 255, 0.15), 0 0 0 1px rgba(0, 210, 255, 0.1);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.content {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardIcon {
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+  margin-bottom: 0;
+}
+
+.card:hover .title {
+  color: var(--accent);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  padding: 0.2rem 0.6rem;
+  background: rgba(0, 210, 255, 0.1);
+  color: var(--accent);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .tag {
+  background: rgba(0, 210, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.link:hover {
+  gap: 0.6rem;
+}

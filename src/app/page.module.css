@@ -1,0 +1,356 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 120px 2rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+  /* NUEVO: Forzamos a que el Hero ocupe gran parte de la pantalla */
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 4rem; /* Reducimos el margen inferior ya que la altura hace el trabajo */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.08) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(60px);
+}
+
+.title {
+  font-size: 5.5rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  font-family: var(--font-mono);
+  max-width: 700px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.highlight {
+  background: linear-gradient(to right, var(--accent), #9333ea);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.bio {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+.bio strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Cambiamos .projectsSection por algo más genérico .section */
+.section {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 8rem;
+  padding-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--foreground);
+  font-family: var(--font-mono);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.sectionTitle svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.sectionTitle::after {
+  content: "";
+  height: 1px;
+  background: var(--border-color);
+  flex-grow: 1;
+  margin-left: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.experienceList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experienceItem {
+  background: rgba(17, 24, 39, 0.4);
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem;
+  border-radius: 0 12px 12px 0;
+  transition: background 0.3s ease;
+}
+
+.experienceItem:hover {
+  background: rgba(17, 24, 39, 0.6);
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.expTitle {
+  font-size: 1.2rem;
+  color: var(--foreground);
+}
+
+.expPeriod {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  background: rgba(0, 210, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.expCompany {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.expDescription {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.contactSection {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.contactCard {
+  background: linear-gradient(135deg, var(--card-bg) 0%, #060b18 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de luz de fondo sutil */
+.contactCard::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contactTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.contactText {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mainBtn {
+  background: var(--accent);
+  color: var(--background);
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mainBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.socialLinks a {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socialLinks a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.footer {
+  margin-top: 4rem;
+  padding: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 100px 1.5rem 4rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .bio {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    margin-top: 5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactCard {
+    padding: 3rem 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 2.2rem;
+  }
+
+  .mainBtn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.8rem;
+    letter-spacing: -1.5px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .contactText {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .mainBtn {
+    padding: 1rem 1.5rem;
+  }
+
+  .socialLinks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

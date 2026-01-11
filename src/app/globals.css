@@ -1,0 +1,139 @@
+:root {
+  /* Fondo más profundo, no es negro puro */
+  --background: #030712;
+  /* Texto casi blanco pero con un matiz azulado para que no canse */
+  --foreground: #f3f4f6;
+
+  /* Azul Cian Neón (más vibrante que el azul estándar) */
+  --accent: #00d2ff;
+  /* Un violeta sutil para gradientes o estados hover */
+  --accent-secondary: #9333ea;
+
+  /* Tarjetas con un ligero tinte azulado y borde sutil */
+  --card-bg: #111827;
+  --border-color: #1f2937;
+  --text-muted: #94a3b8;
+
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-plus-jakarta-sans), "Inter", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--foreground);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Clases de animación */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+/* Estados iniciales para elementos que se animarán */
+.opacity-0 {
+  opacity: 0;
+}
+
+/* Delays para animaciones escalonadas */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+.delay-1000 {
+  animation-delay: 1s;
+}
+.delay-1500 {
+  animation-delay: 1.5s;
+}
+.delay-2000 {
+  animation-delay: 2s;
+}
+.delay-3000 {
+  animation-delay: 3s;
+}
+.delay-4000 {
+  animation-delay: 4s;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
