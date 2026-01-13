@@ -15,7 +15,7 @@ Este documento detalla los pasos para completar el portfolio y convertirlo en un
 
 - [x] Creación de la ruta `/challenges`.
 - [x] Estructura inicial de listado de retos.
-- [ ] **TODO**: Crear un componente de filtrado por lenguaje (Python, PHP, JS).
+- [x] **Filtrado Dinámico**: Componente de filtrado por lenguaje/tecnología (Python, Next.js, etc.).
 - [ ] **TODO**: Conectar con los READMEs de los retos en GitHub para descripciones dinámicas.
 
 ## 📖 Fase 3: Case Studies (Próximo paso 🚀)
@@ -104,12 +104,22 @@ Este plan detalla las mejoras visuales y de experiencia de usuario para elevar e
 - [x] **Mobile Quick Nav**: Botón flotante para navegación rápida entre secciones.
 - [x] **Navegación Contextual**: Ocultar elementos irrelevantes en subpáginas.
 
-## 🚢 Fase 5: Deployment & DevOps
+## 🚢 Fase 5: Deployment & DevOps (Completado ✅)
 
 - [x] Configuración de `next.config.ts` para exportación estática (`output: 'export'`).
-- [ ] Automatización de despliegue en servidor propio vía GitHub Actions / Webhooks.
-- [ ] Configuración final de Nginx (SSL, redirecciones 404 para SPAs).
+- [x] Automatización de despliegue en servidor propio vía GitHub Actions (Rsync / SSH).
+- [x] Configuración de Nginx para producción (Clean URLs, Gzip, Cache, Security Headers).
+- [x] Gestión de subpáginas y manejo de errores 404 en el servidor.
+- [x] **SSL**: Configuración de certificado SSL para producción.
+- [x] **Domain**: Configuración de dominio personalizado.
+- [x] **Secrets**: Configuración de variables de entorno en GitHub Actions.
+
+## 📝 Fase 6: Documentación y Extras (En Proceso 🛠️)
+
+- [x] **README Profesional**: Creación de documentación con badges de estado y tecnologías.
+- [ ] **Licencia**: Añadir archivo de licencia (MIT/GPL).
+- [ ] **Changelog**: Historial de versiones y mejoras.
 
 ---
 
-_Última actualización: 11 de Enero, 2026_
+_Última actualización: 12 de Enero, 2026_
