@@ -40,8 +40,14 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/#proyectos" onClick={closeMenu}>
+            <Link href="/#impacto" onClick={closeMenu}>
               <Zap size={18} className={styles.navIcon} />
+              Impacto
+            </Link>
+          </li>
+          <li>
+            <Link href="/#proyectos" onClick={closeMenu}>
+              <Target size={18} className={styles.navIcon} />
               Proyectos
             </Link>
           </li>

@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Cristian Arenas | Backend Developer & Infrastructure Specialist",
-  description: "Especialista IT con 15+ años de experiencia en desarrollo backend (Python, Laravel) e infraestructura (Linux, Docker). Optimización de sistemas, algoritmos y arquitectura de software.",
+  description: "Backend Developer especializado en Python y Laravel con 2+ años de experiencia. Optimizaciones de sistemas (96% mejora), gestión de infraestructura Linux y desarrollo de arquitecturas escalables.",
   keywords: ["Backend Developer", "Python", "Laravel", "PHP", "PostgreSQL", "SysAdmin", "DevOps", "Linux", "Docker", "Infrastructure", "Next.js", "AlmaLinux"],
   authors: [{ name: "Cristian Arenas" }],
   creator: "Cristian Arenas",

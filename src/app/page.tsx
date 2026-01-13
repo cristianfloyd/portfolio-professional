@@ -2,42 +2,42 @@ import styles from "./page.module.css";
 import ProjectCard from "@/components/ProjectCard";
 import SkillGroup from "@/components/SkillGroup";
 import Reveal from "@/components/Reveal";
-import { Zap, Code2, Briefcase, Mail, ExternalLink, Gauge, Server, Calculator, ShieldCheck } from "lucide-react";
+import { Zap, Code2, Briefcase, Mail, ExternalLink, Gauge, Server, Calculator, ShieldCheck, FileDown, Target } from "lucide-react";
 
 export default function Home() {
   const featuredProjects = [
     {
-      title: "Árbol Genealógico Dragón",
-      description: "Sistema complejo de gestión de dinastías con validaciones de lógica de negocio y arquitectura limpia (SOLID).",
-      tags: ["Python", "Pytest", "SOLID", "CI/CD"],
-      link: "https://github.com/cristianfloyd/Coding-Challenges-Showcase/tree/main/01-Arbol-Genealogico-Dragon",
-    },
-    {
       title: "Crawler Académico RAG",
-      description: "Web scraper automatizado para extracción de información académica (horarios, materias) para sistemas RAG.",
-      tags: ["Python", "Web Scraping", "RAG", "Data Processing"],
+      description: "Web scraper automatizado para la extracción y estructuración de datos institucionales, optimizado para sistemas de Inteligencia Artificial (RAG).",
+      tags: ["Python", "Web Scraping", "Data Engineering"],
       link: "https://github.com/cristianfloyd/crawler",
     },
     {
       title: "Portfolio Web Profesional",
-      description: "Este mismo sitio. Desarrollado con Next.js enfocándose en rendimiento, diseño y UX moderno.",
-      tags: ["Next.js", "React", "TypeScript", "CSS Modules"],
+      description: "Este mismo sitio. Desarrollado con Next.js 16 y React 19, enfocado en performance, arquitectura limpia y despliegue automatizado.",
+      tags: ["Next.js 16", "React 19", "CI/CD"],
       link: "#",
+    },
+    {
+      title: "Coding Challenge Showcase",
+      description: "Monorepo que centraliza la resolución de retos técnicos y katas, demostrando la aplicación de principios SOLID y TDD.",
+      tags: ["GitHub Monorepo", "Architecture", "Best Practices"],
+      link: "https://github.com/cristianfloyd/Coding-Challenges-Showcase",
     },
   ];
 
   const skillCategories = [
     {
-      title: "Backend & Data Engineering",
-      skills: ["PHP (Laravel 11/12)", "Python (FastAPI, Pandas)", "PostgreSQL (Advanced)", "SQL Optimization", "Data Analysis", "REST APIs"],
+      title: "Backend Core",
+      skills: ["Python (FastAPI, Pandas)", "PHP (Laravel 11/12)", "PostgreSQL (Advanced)", "Clean Architecture", "REST APIs", "SQL Optimization"],
     },
     {
-      title: "Infrastructure & Systems",
-      skills: ["Linux (AlmaLinux/CentOS)", "Docker Swarm & Podman", "Nginx / Apache", "Virtualización (VirtualBox/KVM)", "Networks & Security", "SysAdmin (13+ años)"],
+      title: "Frontend & Modern UI",
+      skills: ["Next.js 16 (App Router)", "React 19", "TypeScript", "Tailwind CSS", "Micro-Animations", "Responsive Design"],
     },
     {
-      title: "Architecture & Methodology",
-      skills: ["SOLID / Clean Code", "Hexagonal Architecture", "CI/CD (GitHub Actions)", "TDD / Unit Testing", "AI-Assisted Development", "Git Flow"],
+      title: "Infrastructure & DevOps",
+      skills: ["Linux (AlmaLinux 9)", "Docker & Orchestration", "CI/CD (GitHub Actions)", "Nginx Hardening", "Virtualization (KVM)", "Git Flow & Submodules"],
     },
   ];
 
@@ -65,19 +65,74 @@ export default function Home() {
             Cristian <span className={styles.highlight}>Arenas</span>
           </h1>
         </Reveal>
-        <Reveal animation="fadeInUp" delay={2000}>
-          <p className={styles.subtitle}>Backend Developer & Infrastructure Specialist</p>
+        <Reveal animation="fadeInUp">
+          <p className={styles.subtitle}>Backend Developer | Infrastructure & Systems</p>
         </Reveal>
-        <Reveal animation="fadeInUp" delay={4000}>
+
+        {/* Métricas destacadas - AJUSTADAS */}
+        <Reveal animation="fadeInUp">
+          <div className={styles.metrics}>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>13+</span>
+              <span className={styles.metricLabel}>Años IT / Infra</span>
+            </div>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>2 Años</span>
+              <span className={styles.metricLabel}>Backend Crítico</span>
+            </div>
+            <div className={styles.metric}>
+              <span className={styles.metricNumber}>96%</span>
+              <span className={styles.metricLabel}>Mejora SQL/Performance</span>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal animation="fadeInUp">
           <p className={styles.bio}>
-            Especialista IT con más de 15 años de trayectoria. Mi fortaleza reside en el equilibrio entre la <strong>Ingeniería de Software</strong> y la <strong>Gestión de Infraestructura</strong>. Desde 2012, administro y evoluciono mi propio ecosistema de servidores dedicados, utilizándolo como
-            laboratorio para implementar flujos de CI/CD y desplegar soluciones backend robustas con <strong>Python</strong> y <strong>Laravel</strong>.
+            Desarrollador Backend con foco en lógica de negocio y optimización. Tras más de una década gestionando infraestructura crítica, estos últimos años me he especializado en construir soluciones robustas en <strong>Python</strong> y <strong>Laravel</strong>, aplicando rigor técnico en
+            sistemas de liquidación donde la precisión es la máxima prioridad.
           </p>
+        </Reveal>
+
+        {/* CTAs prominentes */}
+        <Reveal animation="fadeInUp">
+          <div className={styles.heroActions}>
+            <a href="#impacto" className={styles.primaryBtn}>
+              <Zap size={20} />
+              Impacto
+            </a>
+          </div>
         </Reveal>
       </section>
 
-      {/* Proyectos Section */}
-      <section id="proyectos" className={styles.section}>
+      {/* Valor Section */}
+      <section className={styles.valueSection}>
+        <Reveal>
+          <div className={styles.valueCard}>
+            <h2 className={styles.valueTitle}>Ingeniería de Alto Nivel</h2>
+            <div className={styles.valueGrid}>
+              <div className={styles.valueItem}>
+                <Target size={32} className={styles.valueIcon} />
+                <h3>Arquitectura Escalable</h3>
+                <p>Diseño de software mantenible y robusto aplicando Clean Architecture, principios SOLID y patrones de diseño modernos.</p>
+              </div>
+              <div className={styles.valueItem}>
+                <Code2 size={32} className={styles.valueIcon} />
+                <h3>Performance First</h3>
+                <p>Obsesión por la eficiencia: desde la optimización de consultas SQL complejas hasta el ajuste fino del Kernel de Linux.</p>
+              </div>
+              <div className={styles.valueItem}>
+                <Zap size={32} className={styles.valueIcon} />
+                <h3>Sistemas Críticos</h3>
+                <p>Experiencia probada en entornos donde la estabilidad es ley. Gestión de errores, logs transaccionales y alta disponibilidad.</p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Sección: Impacto Técnico & Resoluciones */}
+      <section id="impacto" className={styles.section}>
         <Reveal>
           <h2 className={styles.sectionTitle}>
             <Zap size={28} strokeWidth={2.5} />
@@ -85,7 +140,7 @@ export default function Home() {
           </h2>
         </Reveal>
         <div className={styles.grid}>
-          <Reveal delay={1000}>
+          <Reveal animation="fadeIn">
             <ProjectCard
               title="Optimización SICOSS (SIU Mapuche)"
               description="Reducción de 40min a <1min en procesamiento de nóminas. Rediseño SQL (96% mejora) y migración de lógica a Python/Pandas para procesamiento vectorial."
@@ -94,7 +149,7 @@ export default function Home() {
               icon={Gauge}
             />
           </Reveal>
-          <Reveal delay={2000}>
+          <Reveal animation="fadeIn">
             <ProjectCard
               title="Infraestructura Dedicada & CI/CD"
               description="Administración integral de servidor privado desde 2012. Gestión de virtualización, securización (SELinux/SSH Hardening) y automatización de despliegues vía GitHub Hooks."
@@ -103,7 +158,7 @@ export default function Home() {
               icon={Server}
             />
           </Reveal>
-          <Reveal delay={3000}>
+          <Reveal animation="fadeIn">
             <ProjectCard
               title="Algoritmo de Conciliación de Haberes"
               description="Implementación de Subset Sum con optimización de poda para identificar discrepancias en fórmulas de liquidación, automatizando el diagnóstico de errores contables."
@@ -112,7 +167,7 @@ export default function Home() {
               icon={Calculator}
             />
           </Reveal>
-          <Reveal delay={4000}>
+          <Reveal animation="fadeIn">
             <ProjectCard
               title="Adaptador Criptográfico de Identidad"
               description="Interoperabilidad entre Laravel 11 y SIU Toba (Legacy), permitiendo autenticación segura y transparente mediante un bridge de hashing en PHP 8.3."
@@ -124,9 +179,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sección: Proyectos Destacados (GitHub) */}
+      <section id="proyectos" className={styles.section}>
+        <Reveal animation="fadeIn">
+          <h2 className={styles.sectionTitle}>
+            <Target size={28} strokeWidth={2.5} />
+            Proyectos Destacados
+          </h2>
+        </Reveal>
+        <div className={styles.grid}>
+          {featuredProjects.map((project, index) => (
+            <Reveal key={project.title} delay={index * 100}>
+              <ProjectCard {...project} icon={project.title.includes("Árbol") ? Code2 : Target} />
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
       {/* Habilidades Section */}
       <section id="habilidades" className={styles.section}>
-        <Reveal>
+        <Reveal animation="fadeIn">
           <h2 className={styles.sectionTitle}>
             <Code2 size={28} strokeWidth={2.5} />
             Especialización Técnica
@@ -134,7 +206,7 @@ export default function Home() {
         </Reveal>
         <div className={styles.skillsGrid}>
           {skillCategories.map((category, index) => (
-            <Reveal key={category.title} delay={index * 1000}>
+            <Reveal key={category.title} animation="fadeIn">
               <SkillGroup title={category.title} skills={category.skills} />
             </Reveal>
           ))}
@@ -143,7 +215,7 @@ export default function Home() {
 
       {/* Experiencia Breve Section */}
       <section id="experiencia" className={styles.section}>
-        <Reveal>
+        <Reveal animation="fadeIn">
           <h2 className={styles.sectionTitle}>
             <Briefcase size={28} strokeWidth={2.5} />
             Experiencia Relevante
@@ -151,7 +223,7 @@ export default function Home() {
         </Reveal>
         <div className={styles.experienceList}>
           {experience.map((job, index) => (
-            <Reveal key={job.company} delay={index * 1500}>
+            <Reveal key={job.company} animation="fadeIn">
               <div className={styles.experienceItem}>
                 <div className={styles.expHeader}>
                   <h3 className={styles.expTitle}>{job.title}</h3>
