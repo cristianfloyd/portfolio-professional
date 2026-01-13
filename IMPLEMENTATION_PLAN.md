@@ -6,9 +6,9 @@ Este documento detalla los pasos para completar el portfolio y convertirlo en un
 
 - [x] Configuración inicial (Next.js, TypeScript, Deep Sea Theme).
 - [x] Diseño de Navbar con navegación suavizada.
-- [x] Hero Section con biografía refinada (Backend & Infrastructure).
-- [x] Showcase de Impacto Técnico (SICOSS, SubsetSum, Auth Bridge).
-- [x] Sección de Habilidades (Backend, Infraestructura, Metodologías).
+- [x] Hero Section con biografía honesta y equilibrada (Backend Focus).
+- [x] **Distinción Semántica**: Separación de 'Impacto Técnico' y 'Proyectos GitHub'.
+- [x] Sección de Habilidades (Backend Core, Modern UI, Infraestructura).
 - [x] Footer y Sección de Contacto.
 
 ## 🧪 Fase 2: Coding Challenges (En Proceso 🛠️)
@@ -116,10 +116,11 @@ Este plan detalla las mejoras visuales y de experiencia de usuario para elevar e
 
 ## 📝 Fase 6: Documentación y Extras (En Proceso 🛠️)
 
-- [x] **README Profesional**: Creación de documentación con badges de estado y tecnologías.
+- [x] **README Profesional**: Documentación con badges de estado y tecnologías.
+- [x] **Privacidad**: Historial de Git purgado de datos personales (CV).
 - [ ] **Licencia**: Añadir archivo de licencia (MIT/GPL).
 - [ ] **Changelog**: Historial de versiones y mejoras.
 
 ---
 
-_Última actualización: 12 de Enero, 2026_
+_Última actualización: 13 de Enero, 2026_
