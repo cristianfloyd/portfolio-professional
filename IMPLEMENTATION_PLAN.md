@@ -32,6 +32,7 @@ Crear una sección donde se explique a fondo el _razonamiento_ detrás de las so
 - [x] **Integración Python/Pandas**: Explicar la refactorización de la lógica de negocio migrándola a procesamiento vectorial.
 - [x] **Validación**: Mencionar el uso de Jupyter Notebooks para asegurar la consistencia de resultados (1.2M registros).
 - [x] **Métricas**: Gráfico/Tabla comparativa de tiempos de ejecución.
+- [x] **Enriquecimiento Técnico**: Integrar datos de la auditoría técnica (47,500+ LOC, Arquitectura en Capas, Patrones Strategy/Manager).
 
 ### Case Study 2: Algoritmos de Conciliación de Haberes (Completado ✅)
 
@@ -125,4 +126,4 @@ Este plan detalla las mejoras visuales y de experiencia de usuario para elevar e
 
 ---
 
-_Última actualización: 13 de Enero, 2026_
+_Última actualización: 16 de Enero, 2026_
