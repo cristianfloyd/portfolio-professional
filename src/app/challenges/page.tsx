@@ -6,45 +6,23 @@ import ProjectCard from "@/components/ProjectCard";
 import Reveal from "@/components/Reveal";
 import { Code, Terminal, Globe, Cpu, Database, Layout } from "lucide-react";
 
-const ALL_CHALLENGES = [
-  {
-    title: "01 - Árbol Genealógico Dragón",
-    description: "Reto de lógica de programación: Implementación de un árbol genealógico con validaciones de parentesco y gestión de estado mediante grafos.",
-    tags: ["Python", "Algorithms", "Testing"],
-    link: "https://github.com/cristianfloyd/Coding-Challenges-Showcase/tree/main/01-Arbol-Genealogico-Dragon",
-    icon: Code,
-  },
-  {
-    title: "02 - Gilded Rose Kata",
-    description: "Ejercicio clásico de refactorización de código legacy, aplicando el patrón Strategy para manejar reglas de negocio complejas sin romper la compatibilidad.",
-    tags: ["Python", "Refactoring", "TDD"],
-    link: "https://github.com/cristianfloyd/Coding-Challenges-Showcase/tree/main/GildedRose-Python-Refactoring",
-    icon: Cpu,
-  },
-  {
-    title: "03 - Buscador de Películas (React)",
-    description: "Consumo de API externa, gestión de estados complejos y diseño responsivo con Tailwind CSS.",
-    tags: ["React", "API", "JS"],
-    link: "#",
-    icon: Layout,
-  },
-  {
-    title: "04 - Script de Automatización SysAdmin",
-    description: "Automatización de backups y limpieza de logs en servidores Linux mediante Bash y Python.",
-    tags: ["Bash", "Linux", "Python"],
-    link: "#",
-    icon: Terminal,
-  },
-  {
-    title: "05 - Analizador de Logs (Data)",
-    description: "Procesamiento masivo de logs de servidor para detección de anomalías utilizando Python y Pandas.",
-    tags: ["Python", "Pandas", "Data"],
-    link: "#",
-    icon: Database,
-  },
-];
+import CHALLENGES_DATA from "@/data/challenges.json";
 
-const FILTERS = ["Todos", "Python", "Next.js", "React", "Linux", "JS", "Algorithms"];
+const ICON_MAP: Record<string, any> = {
+  Code,
+  Terminal,
+  Globe,
+  Cpu,
+  Database,
+  Layout,
+};
+
+const ALL_CHALLENGES = CHALLENGES_DATA.map((challenge) => ({
+  ...challenge,
+  icon: ICON_MAP[challenge.icon] || Code,
+}));
+
+const FILTERS = ["Todos", "Python", "Next.js", "React", "Linux", "JS", "Algorithms", "Data"];
 
 export default function ChallengesPage() {
   const [activeFilter, setActiveFilter] = useState("Todos");

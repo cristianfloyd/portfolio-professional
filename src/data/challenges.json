@@ -1,0 +1,51 @@
+[
+  {
+    "title": "🏆 SICOSS Backend - Migración PHP → Python",
+    "description": "Sistema de procesamiento de nóminas SICOSS completamente en Python",
+    "tags": [
+      "Python",
+      "Testing",
+      "Data",
+      "Linux"
+    ],
+    "icon": "Database",
+    "link": "https://github.com/cristianfloyd/sicoss_backend"
+  },
+  {
+    "title": "🏛️ Gilded Rose Refactoring Kata - Python",
+    "description": "> Refactorización profesional completa de código legacy aplicando técnicas modernas de desarrollo de software.",
+    "tags": [
+      "Python",
+      "Refactoring",
+      "Testing",
+      "Linux"
+    ],
+    "icon": "Terminal",
+    "link": "https://github.com/cristianfloyd/GildedRose-Refactoring-Kata-python"
+  },
+  {
+    "title": "🐉 Árbol Genealógico - Casa del Dragón",
+    "description": "> Sistema de gestión de árboles genealógicos con validaciones complejas, implementado siguiendo principios SOLID, Clean Code y Design Patterns. Pro...",
+    "tags": [
+      "Python",
+      "Algorithms",
+      "Refactoring",
+      "Testing",
+      "Linux"
+    ],
+    "icon": "Terminal",
+    "link": "https://github.com/cristianfloyd/Coding-Challenges-Showcase/tree/main/01-Arbol-Genealogico-Dragon"
+  },
+  {
+    "title": "ABC Dataset - Actos Públicos Digitales",
+    "description": "Scraper y herramientas para extraer datos de ofertas laborales docentes de la Provincia de Buenos Aires.",
+    "tags": [
+      "Jupyter Notebook",
+      "Python",
+      "Data",
+      "Linux"
+    ],
+    "icon": "Database",
+    "link": "https://github.com/cristianfloyd/ABC-dataset"
+  }
+]

@@ -16,7 +16,9 @@ Este documento detalla los pasos para completar el portfolio y convertirlo en un
 - [x] Creación de la ruta `/challenges`.
 - [x] Estructura inicial de listado de retos.
 - [x] **Filtrado Dinámico**: Componente de filtrado por lenguaje/tecnología (Python, Next.js, etc.).
-- [ ] **TODO**: Conectar con los READMEs de los retos en GitHub para descripciones dinámicas.
+- [x] **Sincronización con GitHub**: Implementar script (`scripts/sync-challenges.mjs`) para automatizar la obtención de retos.
+- [x] **Descripciones Dinámicas**: Extraer resúmenes de los READMEs originales en el repositorio de retos.
+- [x] **Tags Automáticos**: Detectar lenguajes basados en los archivos del repositorio (ej. .py -> Python).
 
 ## 📖 Fase 3: Case Studies (Próximo paso 🚀)
 
